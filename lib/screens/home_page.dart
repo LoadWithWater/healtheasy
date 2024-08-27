@@ -65,7 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('휴대폰 번호 입력'),
+        title: Text('휴대폰 번호를 입력해주세요'),
+        centerTitle: true, // 제목 중앙 배치
+        backgroundColor: Color(0xffFFA1A1),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -85,7 +87,10 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _submitForm,
-                child: Text('제출'),
+                style: FilledButton.styleFrom(
+                  backgroundColor: Colors.black,
+                ),
+                child: Text('제출', style: TextStyle(color: Colors.white)),
               ),
             ],
           ),

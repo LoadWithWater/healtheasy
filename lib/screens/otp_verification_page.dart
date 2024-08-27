@@ -44,6 +44,8 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('OTP 인증'),
+        centerTitle: true, // 제목 중앙 배치
+        backgroundColor: Color(0xffBAFFBC),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -59,7 +61,10 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _verifyOTP,
-              child: Text('인증'),
+              style: FilledButton.styleFrom(
+                backgroundColor: Colors.black,
+              ),
+              child: Text('인증', style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
