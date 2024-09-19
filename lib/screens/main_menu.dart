@@ -17,7 +17,7 @@ class MainMenu extends StatelessWidget {
         children: <Widget>[
           _buildMenuPage(context, '건강 정보 입력', BasicDataPage(), Colors.green),
           _buildMenuPage(context, '건강 정보 측정', MeasureingPage(), Colors.blue),
-          _buildMenuPage(context, '건강 정보 모니터링', MonitoringPage(), Colors.orange),  // MonitoringPage 연결
+          _buildMenuPage(context, '건강 정보\n모니터링', MonitoringPage(), Colors.orange),  // MonitoringPage 연결
           _buildMenuPage(context, '비대면 진료', TelemedicinePage(), Colors.red),  // TelemedicinePage 연결
         ],
       ),
@@ -34,19 +34,20 @@ class MainMenu extends StatelessWidget {
           );
         },
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(200, 60), // 버튼 크기 지정
-          backgroundColor: color, // 각 버튼의 배경색
-          foregroundColor: Colors.white, // 버튼 텍스트 색상 (흰색)
+          fixedSize: Size(350, 600), // 버튼 크기 조정
+          backgroundColor: color, // 버튼 배경색
+          foregroundColor: Colors.white, // 텍스트 색상 (흰색)
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10), // 직사각형 모양 (모서리를 조금 둥글게)
+            borderRadius: BorderRadius.circular(10), // 모서리를 둥글게
           ),
         ),
         child: Text(
           title,
           style: TextStyle(
-            fontSize: 18, // 텍스트 크기
-            fontWeight: FontWeight.bold, // 텍스트 두께
+            fontSize: 48, // 텍스트 크기를 크게 설정
+            fontWeight: FontWeight.bold, // 텍스트 두께 설정
           ),
+          textAlign: TextAlign.center,
         ),
       ),
     );
